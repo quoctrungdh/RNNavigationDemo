@@ -35,7 +35,8 @@ const MainScreenNavigator = TabNavigator({
 })
 
 MainScreenNavigator.navigationOptions = {
-  title: 'My chats'
+  title: 'My chats',
+  headerRight: <Button title="Info" />
 }
 
 const App = StackNavigator({
