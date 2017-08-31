@@ -2,17 +2,28 @@ import React, { Component } from 'react';
 import {
   View,
   Text,
-  StyleSheet
+  StyleSheet,
+  Button
 } from 'react-native';
 
 class HomeScreen extends Component {
   static navigationOptions = {
     title: 'Welcome'
   }
+
+  handleNavigate = () => {
+    const { navigate } = this.props.navigation;
+    navigate('Chat', { user: 'RN' });
+  }
+
   render() {
     return (
       <View>
         <Text>Home Screen</Text>
+        <Button
+          onPress={this.handleNavigate}
+          title="Let's chat"
+        />
       </View>
     )
   }
